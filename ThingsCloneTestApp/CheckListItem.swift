@@ -14,6 +14,7 @@ struct CheckListItem: View {
 
     @State private var isComplete = false
     @State private var isSwiped = false
+    @State private var hasLists = false
     
     private var isExpanded: Bool {
         vm.selectedItemId == item.id
@@ -80,7 +81,41 @@ struct CheckListItem: View {
                         Text(item.notes.isEmpty ? "Notes" : item.notes)
                             .foregroundColor(item.notes.isEmpty ? .gray : .black)
                             .padding(.top, 2)
+                            .padding(.bottom, 10)
                             .font(.footnote)
+                        
+                        if hasLists {
+                            Spacer()
+                            
+                            Divider()
+                            
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    Image(systemName: "circle")
+                                        .foregroundColor(.accentColor)
+                                    Text("List Item 1")
+                                }
+                                
+                                Divider()
+                                
+                                HStack {
+                                    Image(systemName: "circle")
+                                        .foregroundColor(.accentColor)
+                                    Text("List Item 2")
+                                }
+                                
+                                Divider()
+                                
+                                HStack {
+                                    Image(systemName: "checkmark")
+                                    Text("List Item 2").strikethrough()
+                                }
+                                .foregroundColor(.gray)
+                            }
+                            .font(.caption)
+                            
+                            Divider()
+                        }
                         
                         Spacer()
                         
@@ -115,7 +150,9 @@ struct CheckListItem: View {
                             })
                             
                             Button(action: {
-                                // todo
+                                withAnimation {
+                                    hasLists.toggle()
+                                }
                             }, label: {
                                 Image(systemName: "list.bullet")
                             })
@@ -136,17 +173,20 @@ struct CheckListItem: View {
                 .padding(.vertical, 20)
                 .frame(alignment: .top)
             }
-            .frame(height: isExpanded ? 180 : 30)
+            .frame(height: isExpanded ? hasLists ? 250 : 180 : 30)
         }
     }
 }
 struct CheckListItem_Previews: PreviewProvider {
-    static let vm: HomeViewModel = HomeViewModel()
-    static let item1 = TodoItem(title: "Title 1", notes: "")
-    static let item2 = TodoItem(title: "Title 2", notes: "Ok Hello")
+    static var vm: HomeViewModel = HomeViewModel()
+    static let item1 = TodoItem(id: "item1", title: "Title 1", notes: "")
+    static let item2 = TodoItem(id: "item2", title: "Title 2", notes: "Ok Hello")
+    static let item3 = TodoItem(id: "item3", title: "Title 3", notes: "Ok Hello")
     
     static var previews: some View {
-        ZStack {
+        vm.selectedItemId = "item2"
+        
+        return ZStack {
             Color.clear
                 .contentShape(Rectangle())
                 .onTapGesture {
@@ -160,6 +200,7 @@ struct CheckListItem_Previews: PreviewProvider {
             VStack(spacing: 20) {
                 CheckListItem(item: item1)
                 CheckListItem(item: item2)
+                CheckListItem(item: item3)
             }
             .padding()
         }
