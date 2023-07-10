@@ -1,6 +1,6 @@
 //
 //  HomeViewModel.swift
-//  ThingsCloneTestApp
+//  ThingsClone
 //
 //  Created by Gan Tu on 7/10/23.
 //

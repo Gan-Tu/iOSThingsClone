@@ -1,6 +1,6 @@
 //
 //  Colors.swift
-//  ThingsCloneTestApp
+//  ThingsClone
 //
 //  Created by Gan Tu on 7/9/23.
 //
