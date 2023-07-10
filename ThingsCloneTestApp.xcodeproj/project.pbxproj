@@ -12,6 +12,11 @@
 		59FCF2462A5BA1360088CCC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59FCF2452A5BA1360088CCC2 /* Assets.xcassets */; };
 		59FCF2492A5BA1360088CCC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59FCF2482A5BA1360088CCC2 /* Preview Assets.xcassets */; };
 		59FCF2502A5BA15B0088CCC2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCF24F2A5BA15B0088CCC2 /* Colors.swift */; };
+		59FCF2522A5BAD770088CCC2 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCF2512A5BAD770088CCC2 /* SectionView.swift */; };
+		59FCF2542A5BAFCB0088CCC2 /* ContentsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCF2532A5BAFCB0088CCC2 /* ContentsHelper.swift */; };
+		59FCF2572A5BAFFB0088CCC2 /* LoremSwiftum in Frameworks */ = {isa = PBXBuildFile; productRef = 59FCF2562A5BAFFB0088CCC2 /* LoremSwiftum */; };
+		59FCF2592A5BB1250088CCC2 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCF2582A5BB1250088CCC2 /* Checkbox.swift */; };
+		59FCF25B2A5BB1780088CCC2 /* CheckListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCF25A2A5BB1780088CCC2 /* CheckListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,10 @@
 		59FCF2452A5BA1360088CCC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59FCF2482A5BA1360088CCC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		59FCF24F2A5BA15B0088CCC2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		59FCF2512A5BAD770088CCC2 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		59FCF2532A5BAFCB0088CCC2 /* ContentsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsHelper.swift; sourceTree = "<group>"; };
+		59FCF2582A5BB1250088CCC2 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		59FCF25A2A5BB1780088CCC2 /* CheckListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59FCF2572A5BAFFB0088CCC2 /* LoremSwiftum in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +66,10 @@
 				59FCF2412A5BA1350088CCC2 /* ThingsCloneTestAppApp.swift */,
 				59FCF24F2A5BA15B0088CCC2 /* Colors.swift */,
 				59FCF2432A5BA1350088CCC2 /* ContentView.swift */,
+				59FCF25A2A5BB1780088CCC2 /* CheckListItem.swift */,
+				59FCF2582A5BB1250088CCC2 /* Checkbox.swift */,
+				59FCF2512A5BAD770088CCC2 /* SectionView.swift */,
+				59FCF2532A5BAFCB0088CCC2 /* ContentsHelper.swift */,
 				59FCF2452A5BA1360088CCC2 /* Assets.xcassets */,
 				59FCF2472A5BA1360088CCC2 /* Preview Content */,
 			);
@@ -86,6 +100,9 @@
 			dependencies = (
 			);
 			name = ThingsCloneTestApp;
+			packageProductDependencies = (
+				59FCF2562A5BAFFB0088CCC2 /* LoremSwiftum */,
+			);
 			productName = ThingsCloneTestApp;
 			productReference = 59FCF23E2A5BA1350088CCC2 /* ThingsCloneTestApp.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +131,9 @@
 				Base,
 			);
 			mainGroup = 59FCF2352A5BA1350088CCC2;
+			packageReferences = (
+				59FCF2552A5BAFFB0088CCC2 /* XCRemoteSwiftPackageReference "LoremSwiftum" */,
+			);
 			productRefGroup = 59FCF23F2A5BA1350088CCC2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,9 +160,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59FCF2522A5BAD770088CCC2 /* SectionView.swift in Sources */,
 				59FCF2442A5BA1350088CCC2 /* ContentView.swift in Sources */,
+				59FCF2592A5BB1250088CCC2 /* Checkbox.swift in Sources */,
+				59FCF2542A5BAFCB0088CCC2 /* ContentsHelper.swift in Sources */,
 				59FCF2502A5BA15B0088CCC2 /* Colors.swift in Sources */,
 				59FCF2422A5BA1350088CCC2 /* ThingsCloneTestAppApp.swift in Sources */,
+				59FCF25B2A5BB1780088CCC2 /* CheckListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +367,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		59FCF2552A5BAFFB0088CCC2 /* XCRemoteSwiftPackageReference "LoremSwiftum" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lukaskubanek/LoremSwiftum";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		59FCF2562A5BAFFB0088CCC2 /* LoremSwiftum */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 59FCF2552A5BAFFB0088CCC2 /* XCRemoteSwiftPackageReference "LoremSwiftum" */;
+			productName = LoremSwiftum;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 59FCF2362A5BA1350088CCC2 /* Project object */;
 }
