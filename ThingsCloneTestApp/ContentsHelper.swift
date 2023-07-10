@@ -19,3 +19,18 @@ func GenerateNotes() -> String {
         return Lorem.paragraph
     }
 }
+
+let section1Items: [TodoItem] = [
+    TodoItem(title: GenerateTitle(), notes: GenerateNotes()),
+    TodoItem(title: GenerateTitle(), notes: GenerateNotes()),
+]
+
+let section2Items: [TodoItem] = [
+    TodoItem(title: GenerateTitle(), notes: GenerateNotes()),
+    TodoItem(title: GenerateTitle(), notes: GenerateNotes()),
+]
+
+let section3Items: [TodoItem] = [
+    TodoItem(title: GenerateTitle(), notes: GenerateNotes()),
+    TodoItem(title: GenerateTitle(), notes: GenerateNotes()),
+]

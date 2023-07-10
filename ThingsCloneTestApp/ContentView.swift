@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selectedItemId : UUID? = nil
-    @State private var hasExpandedItem: Bool = false
+    @ObservedObject var vm = HomeViewModel()
+    
+    let sections = [section1Items, section2Items, section3Items]
     
     var body: some View {
         ZStack {
@@ -17,7 +18,7 @@ struct ContentView: View {
                 .contentShape(Rectangle())
                 .onTapGesture {
                     withAnimation {
-                        hasExpandedItem = true
+                        vm.updateSelectedItemId(nil)
                     }
                 }
                 .edgesIgnoringSafeArea(.all)
@@ -35,9 +36,9 @@ struct ContentView: View {
                     .padding(.bottom, 20)
                     
                     VStack(spacing: 40) {
-                        SectionView()
-                        SectionView()
-                        SectionView()
+                        ForEach(0..<sections.count, id: \.self) { index in
+                            SectionView(title: "Section \(index+1)", items: sections[index], vm: vm)
+                        }
                     }
 
                     Spacer()
