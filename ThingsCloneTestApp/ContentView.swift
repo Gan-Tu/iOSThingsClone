@@ -13,17 +13,17 @@ struct ContentView: View {
     let sections = [section1Items, section2Items, section3Items]
     
     var body: some View {
-        ZStack {
-            Color.clear
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    withAnimation {
-                        vm.updateSelectedItemId(nil)
+        ScrollView {
+            ZStack {
+                Color.clear
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        withAnimation {
+                            vm.updateSelectedItemId(nil)
+                        }
                     }
-                }
-                .edgesIgnoringSafeArea(.all)
+                    .edgesIgnoringSafeArea(.all)
 
-            ScrollView {
                 VStack(alignment: .leading) {
                     HStack {
                         Image(systemName: "star.fill")
