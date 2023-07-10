@@ -11,7 +11,7 @@ struct SectionView: View {
     var title: String
     var items: [TodoItem]
 
-    @ObservedObject var vm: HomeViewModel
+    @EnvironmentObject var vm: HomeViewModel
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -29,7 +29,7 @@ struct SectionView: View {
             Divider()
 
             ForEach(items, id: \.id) { item in
-                CheckListItem(item: item, vm: vm)
+                CheckListItem(item: item)
             }
         }
     }
@@ -44,7 +44,8 @@ struct SectionView_Previews: PreviewProvider {
     
     static var previews: some View {
         VStack {
-            SectionView(title: "Section Title", items: items, vm: vm).padding()
+            SectionView(title: "Section Title", items: items).padding()
         }
+        .environmentObject(vm)
     }
 }

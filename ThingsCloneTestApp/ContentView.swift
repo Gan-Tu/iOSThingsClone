@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var vm = HomeViewModel()
+    @StateObject var vm = HomeViewModel()
     
     let sections = [section1Items, section2Items, section3Items]
     
@@ -37,7 +37,7 @@ struct ContentView: View {
                     
                     VStack(spacing: 40) {
                         ForEach(0..<sections.count, id: \.self) { index in
-                            SectionView(title: "Section \(index+1)", items: sections[index], vm: vm)
+                            SectionView(title: "Section \(index+1)", items: sections[index])
                         }
                     }
 
@@ -47,6 +47,7 @@ struct ContentView: View {
                 .foregroundColor(.black)
             }
         }
+        .environmentObject(vm)
     }
 }
 

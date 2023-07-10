@@ -10,7 +10,7 @@ import SwiftUI
 struct CheckListItem: View {
     var item: TodoItem
     
-    @ObservedObject var vm: HomeViewModel
+    @EnvironmentObject var vm: HomeViewModel
 
     @State private var isComplete = false
     @State private var isSwiped = false
@@ -149,9 +149,10 @@ struct CheckListItem_Previews: PreviewProvider {
             
             
             VStack(spacing: 20) {
-                CheckListItem(item: item1, vm: vm)
-                CheckListItem(item: item2, vm: vm)
+                CheckListItem(item: item1)
+                CheckListItem(item: item2)
             }
         }
+        .environmentObject(vm)
     }
 }
