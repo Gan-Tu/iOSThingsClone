@@ -128,7 +128,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 59FCF2392A5BA1350088CCC2 /* Build configuration list for PBXProject "ThingsCloneTestApp" */;
+			buildConfigurationList = 59FCF2392A5BA1350088CCC2 /* Build configuration list for PBXProject "ThingsClone" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -358,7 +358,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		59FCF2392A5BA1350088CCC2 /* Build configuration list for PBXProject "ThingsCloneTestApp" */ = {
+		59FCF2392A5BA1350088CCC2 /* Build configuration list for PBXProject "ThingsClone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				59FCF24A2A5BA1360088CCC2 /* Debug */,
