@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CheckListItem: View {
-    var item: TodoItem
+    @StateObject var item: TodoItem
     
     @EnvironmentObject var vm: HomeViewModel
 
@@ -72,17 +72,21 @@ struct CheckListItem: View {
                     
                     VStack(alignment: .leading) {
                         HStack {
-                            Text(item.title)
-                                .foregroundColor(isComplete ? .gray : .black)
-                            
+                            TextField(
+                                item.title.isEmpty ? "New To-Do" : item.title,
+                                text: $item.title,
+                                axis: .vertical)
                             Spacer()
                         }
-                        
-                        Text(item.notes.isEmpty ? "Notes" : item.notes)
+
+                        TextField(item.notes.isEmpty ? "Notes" : item.notes, text: $item.notes, axis: .vertical)
                             .foregroundColor(item.notes.isEmpty ? .gray : .black)
                             .padding(.top, 2)
                             .padding(.bottom, 10)
                             .font(.footnote)
+                        
+//                        TextEditor(text: $item.notes)
+//                            .foregroundColor(item.notes.isEmpty ? .gray : .black)
                         
                         if hasLists {
                             Spacer()
@@ -177,11 +181,12 @@ struct CheckListItem: View {
         }
     }
 }
+
 struct CheckListItem_Previews: PreviewProvider {
     static var vm: HomeViewModel = HomeViewModel()
-    static let item1 = TodoItem(id: "item1", title: "Title 1", notes: "")
-    static let item2 = TodoItem(id: "item2", title: "Title 2", notes: "Ok Hello")
-    static let item3 = TodoItem(id: "item3", title: "Title 3", notes: "Ok Hello")
+    static var item1 = TodoItem(id: "item1", title: "Title 1", notes: "")
+    static var item2 = TodoItem(id: "item2", title: "Title 2", notes: "Ok Hello")
+    static var item3 = TodoItem(id: "item3", title: "Title 3", notes: "Ok Hello")
     
     static var previews: some View {
         vm.selectedItemId = "item2"
