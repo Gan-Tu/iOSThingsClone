@@ -90,6 +90,7 @@ struct CheckListItem: View {
     @Binding var selectedItemId: UUID?
 
     @State private var isComplete = false
+    @State private var isSwiped = false
     
     private var isExpanded: Bool {
         selectedItemId == id
@@ -100,29 +101,53 @@ struct CheckListItem: View {
             Button(action: {
                 withAnimation {
                     selectedItemId = id
+                    isSwiped = false
                 }
             }, label: {
-                HStack(alignment: .top) {
-                    Checkbox(isComplete: $isComplete)
-                    VStack(alignment: .leading) {
+                ZStack {
+                    if isSwiped {
+                        Color.accentColor
+                            .cornerRadius(5)
+                            .opacity(0.2)
+                    }
+                    
+                    HStack(alignment: .top) {
+                        Checkbox(isComplete: $isComplete)
+
                         Text(text)
                             .foregroundColor(isComplete ? .gray : .black)
                             .strikethrough(isComplete)
+
                         Spacer()
+                        
+                        if isSwiped {
+                            Image(systemName: "circle.inset.filled")
+                                .foregroundColor(.accentColor)
+                        }
                     }
-                    .frame(alignment: .top)
-                    Spacer()
+                    .padding(5)
                 }
-                .padding(5)
                 .frame(height: isExpanded ? 200 : 30, alignment: .top)
             })
+            .highPriorityGesture(
+                DragGesture(minimumDistance: 50)
+                    .onEnded { value in
+                        if value.translation.width < 0 {
+                            isSwiped.toggle()
+                        }
+                    }
+            )
         } else {
             HStack(alignment: .top) {
                 Checkbox(isComplete: $isComplete)
                 
                 VStack(alignment: .leading) {
-                    Text(text)
-                        .foregroundColor(isComplete ? .gray : .black)
+                    HStack {
+                        Text(text)
+                            .foregroundColor(isComplete ? .gray : .black)
+                        
+                        Spacer()
+                    }
                     
                     Text(notes.isEmpty ? "Notes" : notes)
                         .foregroundColor(notes.isEmpty ? .gray : .black)
