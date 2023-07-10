@@ -22,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		599B48202A5C614600600536 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		59FCF23E2A5BA1350088CCC2 /* ThingsClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThingsClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59FCF2412A5BA1350088CCC2 /* ThingsCloneTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsCloneTestApp.swift; sourceTree = "<group>"; };
 		59FCF2432A5BA1350088CCC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +68,7 @@
 		59FCF2402A5BA1350088CCC2 /* ThingsClone */ = {
 			isa = PBXGroup;
 			children = (
+				599B48202A5C614600600536 /* Info.plist */,
 				59FCF2412A5BA1350088CCC2 /* ThingsCloneTestApp.swift */,
 				59FCF24F2A5BA15B0088CCC2 /* Colors.swift */,
 				59FCF2432A5BA1350088CCC2 /* ContentView.swift */,
@@ -307,6 +309,7 @@
 				DEVELOPMENT_TEAM = K3URZZFDQP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThingsClone/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ThingsClone;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -340,6 +343,7 @@
 				DEVELOPMENT_TEAM = K3URZZFDQP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThingsClone/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ThingsClone;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
