@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		59FCF2422A5BA1350088CCC2 /* ThingsCloneTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCF2412A5BA1350088CCC2 /* ThingsCloneTestAppApp.swift */; };
+		59FCF2422A5BA1350088CCC2 /* ThingsCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCF2412A5BA1350088CCC2 /* ThingsCloneApp.swift */; };
 		59FCF2442A5BA1350088CCC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCF2432A5BA1350088CCC2 /* ContentView.swift */; };
 		59FCF2462A5BA1360088CCC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59FCF2452A5BA1360088CCC2 /* Assets.xcassets */; };
 		59FCF2492A5BA1360088CCC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59FCF2482A5BA1360088CCC2 /* Preview Assets.xcassets */; };
@@ -22,8 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		59FCF23E2A5BA1350088CCC2 /* ThingsCloneTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThingsCloneTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		59FCF2412A5BA1350088CCC2 /* ThingsCloneTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsCloneTestAppApp.swift; sourceTree = "<group>"; };
+		59FCF23E2A5BA1350088CCC2 /* ThingsClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThingsClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59FCF2412A5BA1350088CCC2 /* ThingsCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsCloneApp.swift; sourceTree = "<group>"; };
 		59FCF2432A5BA1350088CCC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		59FCF2452A5BA1360088CCC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59FCF2482A5BA1360088CCC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		59FCF2352A5BA1350088CCC2 = {
 			isa = PBXGroup;
 			children = (
-				59FCF2402A5BA1350088CCC2 /* ThingsCloneTestApp */,
+				59FCF2402A5BA1350088CCC2 /* ThingsClone */,
 				59FCF23F2A5BA1350088CCC2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,15 +59,15 @@
 		59FCF23F2A5BA1350088CCC2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				59FCF23E2A5BA1350088CCC2 /* ThingsCloneTestApp.app */,
+				59FCF23E2A5BA1350088CCC2 /* ThingsClone.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		59FCF2402A5BA1350088CCC2 /* ThingsCloneTestApp */ = {
+		59FCF2402A5BA1350088CCC2 /* ThingsClone */ = {
 			isa = PBXGroup;
 			children = (
-				59FCF2412A5BA1350088CCC2 /* ThingsCloneTestAppApp.swift */,
+				59FCF2412A5BA1350088CCC2 /* ThingsCloneApp.swift */,
 				59FCF24F2A5BA15B0088CCC2 /* Colors.swift */,
 				59FCF2432A5BA1350088CCC2 /* ContentView.swift */,
 				59FCF25A2A5BB1780088CCC2 /* CheckListItem.swift */,
@@ -79,7 +79,7 @@
 				59FCF2452A5BA1360088CCC2 /* Assets.xcassets */,
 				59FCF2472A5BA1360088CCC2 /* Preview Content */,
 			);
-			path = ThingsCloneTestApp;
+			path = ThingsClone;
 			sourceTree = "<group>";
 		};
 		59FCF2472A5BA1360088CCC2 /* Preview Content */ = {
@@ -93,9 +93,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		59FCF23D2A5BA1350088CCC2 /* ThingsCloneTestApp */ = {
+		59FCF23D2A5BA1350088CCC2 /* ThingsClone */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 59FCF24C2A5BA1360088CCC2 /* Build configuration list for PBXNativeTarget "ThingsCloneTestApp" */;
+			buildConfigurationList = 59FCF24C2A5BA1360088CCC2 /* Build configuration list for PBXNativeTarget "ThingsClone" */;
 			buildPhases = (
 				59FCF23A2A5BA1350088CCC2 /* Sources */,
 				59FCF23B2A5BA1350088CCC2 /* Frameworks */,
@@ -105,12 +105,12 @@
 			);
 			dependencies = (
 			);
-			name = ThingsCloneTestApp;
+			name = ThingsClone;
 			packageProductDependencies = (
 				59FCF2562A5BAFFB0088CCC2 /* LoremSwiftum */,
 			);
 			productName = ThingsCloneTestApp;
-			productReference = 59FCF23E2A5BA1350088CCC2 /* ThingsCloneTestApp.app */;
+			productReference = 59FCF23E2A5BA1350088CCC2 /* ThingsClone.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -144,7 +144,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				59FCF23D2A5BA1350088CCC2 /* ThingsCloneTestApp */,
+				59FCF23D2A5BA1350088CCC2 /* ThingsClone */,
 			);
 		};
 /* End PBXProject section */
@@ -173,7 +173,7 @@
 				59FCF25D2A5BBE920088CCC2 /* HomeViewModel.swift in Sources */,
 				59FCF2542A5BAFCB0088CCC2 /* ContentsHelper.swift in Sources */,
 				59FCF2502A5BA15B0088CCC2 /* Colors.swift in Sources */,
-				59FCF2422A5BA1350088CCC2 /* ThingsCloneTestAppApp.swift in Sources */,
+				59FCF2422A5BA1350088CCC2 /* ThingsCloneApp.swift in Sources */,
 				59FCF25B2A5BB1780088CCC2 /* CheckListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +303,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ThingsCloneTestApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = K3URZZFDQP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -336,7 +336,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ThingsCloneTestApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = K3URZZFDQP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -373,7 +373,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		59FCF24C2A5BA1360088CCC2 /* Build configuration list for PBXNativeTarget "ThingsCloneTestApp" */ = {
+		59FCF24C2A5BA1360088CCC2 /* Build configuration list for PBXNativeTarget "ThingsClone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				59FCF24D2A5BA1360088CCC2 /* Debug */,
