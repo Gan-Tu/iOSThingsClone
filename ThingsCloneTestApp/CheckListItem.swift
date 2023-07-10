@@ -88,8 +88,9 @@ struct CheckListItem: View {
 //                        TextEditor(text: $item.notes)
 //                            .foregroundColor(item.notes.isEmpty ? .gray : .black)
                         
+                        Spacer()
+
                         if hasLists {
-                            Spacer()
                             
                             Divider()
                             
@@ -177,7 +178,6 @@ struct CheckListItem: View {
                 .padding(.vertical, 20)
                 .frame(alignment: .top)
             }
-            .frame(height: isExpanded ? hasLists ? 250 : 180 : 30)
         }
     }
 }
@@ -190,7 +190,6 @@ struct CheckListItem_Previews: PreviewProvider {
     
     static var previews: some View {
         vm.selectedItemId = "item2"
-        
         return ZStack {
             Color.clear
                 .contentShape(Rectangle())
@@ -202,13 +201,14 @@ struct CheckListItem_Previews: PreviewProvider {
                 .edgesIgnoringSafeArea(.all)
             
             
-            VStack(spacing: 20) {
+            LazyVStack(spacing: 20) {
                 CheckListItem(item: item1)
                 CheckListItem(item: item2)
                 CheckListItem(item: item3)
             }
             .padding()
         }
+        .frame(height: 500)
         .environmentObject(vm)
     }
 }

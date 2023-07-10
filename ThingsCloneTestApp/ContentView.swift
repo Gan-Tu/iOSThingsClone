@@ -43,7 +43,7 @@ struct ContentView: View {
 
                     Spacer()
                 }
-                .padding(.horizontal, 10)
+                .padding(.horizontal, 20)
                 .foregroundColor(.black)
             }
         }
