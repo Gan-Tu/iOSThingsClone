@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		59FCF2422A5BA1350088CCC2 /* ThingsCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCF2412A5BA1350088CCC2 /* ThingsCloneApp.swift */; };
+		59FCF2422A5BA1350088CCC2 /* ThingsCloneTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCF2412A5BA1350088CCC2 /* ThingsCloneTestApp.swift */; };
 		59FCF2442A5BA1350088CCC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FCF2432A5BA1350088CCC2 /* ContentView.swift */; };
 		59FCF2462A5BA1360088CCC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59FCF2452A5BA1360088CCC2 /* Assets.xcassets */; };
 		59FCF2492A5BA1360088CCC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59FCF2482A5BA1360088CCC2 /* Preview Assets.xcassets */; };
@@ -23,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		59FCF23E2A5BA1350088CCC2 /* ThingsClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThingsClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		59FCF2412A5BA1350088CCC2 /* ThingsCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsCloneApp.swift; sourceTree = "<group>"; };
+		59FCF2412A5BA1350088CCC2 /* ThingsCloneTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsCloneTestApp.swift; sourceTree = "<group>"; };
 		59FCF2432A5BA1350088CCC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		59FCF2452A5BA1360088CCC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59FCF2482A5BA1360088CCC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		59FCF2402A5BA1350088CCC2 /* ThingsClone */ = {
 			isa = PBXGroup;
 			children = (
-				59FCF2412A5BA1350088CCC2 /* ThingsCloneApp.swift */,
+				59FCF2412A5BA1350088CCC2 /* ThingsCloneTestApp.swift */,
 				59FCF24F2A5BA15B0088CCC2 /* Colors.swift */,
 				59FCF2432A5BA1350088CCC2 /* ContentView.swift */,
 				59FCF25A2A5BB1780088CCC2 /* CheckListItem.swift */,
@@ -173,7 +173,7 @@
 				59FCF25D2A5BBE920088CCC2 /* HomeViewModel.swift in Sources */,
 				59FCF2542A5BAFCB0088CCC2 /* ContentsHelper.swift in Sources */,
 				59FCF2502A5BA15B0088CCC2 /* Colors.swift in Sources */,
-				59FCF2422A5BA1350088CCC2 /* ThingsCloneApp.swift in Sources */,
+				59FCF2422A5BA1350088CCC2 /* ThingsCloneTestApp.swift in Sources */,
 				59FCF25B2A5BB1780088CCC2 /* CheckListItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
