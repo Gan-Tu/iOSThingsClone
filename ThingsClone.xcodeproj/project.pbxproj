@@ -109,7 +109,7 @@
 			packageProductDependencies = (
 				59FCF2562A5BAFFB0088CCC2 /* LoremSwiftum */,
 			);
-			productName = ThingsCloneTestApp;
+			productName = ThingsClone;
 			productReference = 59FCF23E2A5BA1350088CCC2 /* ThingsClone.app */;
 			productType = "com.apple.product-type.application";
 		};
