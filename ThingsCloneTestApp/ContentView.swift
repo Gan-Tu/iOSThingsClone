@@ -16,7 +16,28 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
+            // Click outside of view closes all active items
+            Color.clear
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    withAnimation {
+                        selectedItemId = nil
+                    }
+                }
+                .edgesIgnoringSafeArea(.all)
+            
             VStack(alignment: .leading) {
+                HStack {
+                    Image(systemName: "star.fill")
+                        .foregroundColor(.yellow)
+                    Text("Today")
+                        .foregroundColor(.black)
+                        .bold()
+                }
+                .font(.title2)
+                .padding(.bottom, 20)
+                
+                
                 HStack(alignment: .center) {
                     Image(systemName: "circle.righthalf.filled")
                         .foregroundColor(.accentColor)
@@ -33,17 +54,14 @@ struct ContentView: View {
 
                 CheckListItem(text: "Find Wallet", selectedItemId: $selectedItemId)
 
-                CheckListItem(text: "Buy Groceries", selectedItemId: $selectedItemId)
+                CheckListItem(text: "Buy Groceries",
+                              notes: "Milk and Tea",
+                              selectedItemId: $selectedItemId)
 
                 Spacer()
             }
             .padding()
             .foregroundColor(.black)
-            .onTapGesture {
-                withAnimation {
-                    selectedItemId = nil
-                }
-            }
         }
     }
 }
@@ -67,6 +85,7 @@ struct Checkbox: View {
 struct CheckListItem: View {
     var id = UUID()
     var text = ""
+    var notes = ""
 
     @Binding var selectedItemId: UUID?
 
@@ -105,9 +124,10 @@ struct CheckListItem: View {
                     Text(text)
                         .foregroundColor(isComplete ? .gray : .black)
                     
-                    Text("Notes")
-                        .foregroundColor(.gray)
+                    Text(notes.isEmpty ? "Notes" : notes)
+                        .foregroundColor(notes.isEmpty ? .gray : .black)
                         .padding(.top, 2)
+                        .font(.footnote)
                         .frame(height: 50, alignment: .top)
                     
                     Spacer()
