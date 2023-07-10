@@ -11,6 +11,10 @@ import SwiftUI
 class HomeViewModel : ObservableObject {
     @Published var selectedItemId: String?
     
+    public var hasSelectedItem: Bool {
+        selectedItemId != nil && !(selectedItemId!.isEmpty)
+    }
+    
     public func updateSelectedItemId(_ id: String?) {
         selectedItemId = id
     }

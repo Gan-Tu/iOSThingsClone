@@ -60,74 +60,83 @@ struct CheckListItem: View {
                     }
             )
         } else {
-            HStack(alignment: .top) {
-                Checkbox(isComplete: $isComplete)
+            ZStack {
+                Rectangle()
+                    .fill(Color.white)
+                    .cornerRadius(5)
+                    .shadow(color: .gray.opacity(0.3), radius: 3)
                 
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text(item.title)
-                            .foregroundColor(isComplete ? .gray : .black)
+                HStack(alignment: .top) {
+                    Checkbox(isComplete: $isComplete)
+                    
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text(item.title)
+                                .foregroundColor(isComplete ? .gray : .black)
+                            
+                            Spacer()
+                        }
+                        
+                        Text(item.notes.isEmpty ? "Notes" : item.notes)
+                            .foregroundColor(item.notes.isEmpty ? .gray : .black)
+                            .padding(.top, 2)
+                            .font(.footnote)
                         
                         Spacer()
+                        
+                        HStack {
+                            Button(action: {
+                                // todo
+                            }, label: {
+                                if item.isToday {
+                                    Image(systemName: "star.fill")
+                                        .foregroundColor(.yellow)
+                                    Text("Today")
+                                        .font(.callout)
+                                        .foregroundColor(.black)
+                                        .bold()
+                                } else {
+                                    Image(systemName: "archivebox.fill")
+                                        .foregroundColor(.brown)
+                                    Text("Someday")
+                                        .font(.callout)
+                                        .foregroundColor(.black)
+                                        .bold()
+                                }
+                            })
+                            
+                            Spacer()
+                            
+                            Button(action: {
+                                // todo
+                            }, label: {
+                                Image(systemName: "tag")
+                                    .rotationEffect(.degrees(270))
+                            })
+                            
+                            Button(action: {
+                                // todo
+                            }, label: {
+                                Image(systemName: "list.bullet")
+                            })
+                            
+                            Button(action: {
+                                // todo
+                            }, label: {
+                                Image(systemName: "flag")
+                            })
+                        }
+                        .foregroundColor(.gray)
                     }
-                    
-                    Text(item.notes.isEmpty ? "Notes" : item.notes)
-                        .foregroundColor(item.notes.isEmpty ? .gray : .black)
-                        .padding(.top, 2)
-                        .font(.footnote)
+                    .frame(alignment: .top)
                     
                     Spacer()
-                    
-                    HStack {
-                        Button(action: {
-                            // todo
-                        }, label: {
-                            if item.isToday {
-                                Image(systemName: "star.fill")
-                                    .foregroundColor(.yellow)
-                                Text("Today")
-                                    .font(.callout)
-                                    .foregroundColor(.black)
-                                    .bold()
-                            } else {
-                                Image(systemName: "archivebox.fill")
-                                    .foregroundColor(.brown)
-                                Text("Someday")
-                                    .font(.callout)
-                                    .foregroundColor(.black)
-                                    .bold()
-                            }
-                        })
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            // todo
-                        }, label: {
-                            Image(systemName: "tag")
-                                .rotationEffect(.degrees(270))
-                        })
-                        
-                        Button(action: {
-                            // todo
-                        }, label: {
-                            Image(systemName: "list.bullet")
-                        })
-                        
-                        Button(action: {
-                            // todo
-                        }, label: {
-                            Image(systemName: "flag")
-                        })
-                    }
-                    .foregroundColor(.gray)
                 }
+                .padding(.horizontal, 10)
+                .padding(.vertical, 20)
                 .frame(alignment: .top)
-                
-                Spacer()
             }
-            .padding(5)
-            .frame(height: isExpanded ? 150 : 30, alignment: .top)
+            .frame(height: isExpanded ? 180 : 30)
         }
     }
 }
@@ -152,6 +161,7 @@ struct CheckListItem_Previews: PreviewProvider {
                 CheckListItem(item: item1)
                 CheckListItem(item: item2)
             }
+            .padding()
         }
         .environmentObject(vm)
     }

@@ -14,7 +14,7 @@ struct SectionView: View {
     @EnvironmentObject var vm: HomeViewModel
 
     var body: some View {
-        VStack(alignment: .leading) {
+        LazyVStack(alignment: .leading) {
             HStack(alignment: .center) {
                 Image(systemName: "circle.righthalf.filled")
                     .foregroundColor(.accentColor)
