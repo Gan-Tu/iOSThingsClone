@@ -11,4 +11,5 @@ struct TodoItem: Identifiable  {
     var id = UUID().uuidString
     var title: String
     var notes: String
+    var isToday: Bool = Bool.random()
 }

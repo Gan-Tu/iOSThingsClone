@@ -82,12 +82,21 @@ struct CheckListItem: View {
                         Button(action: {
                             // todo
                         }, label: {
-                            Image(systemName: "star.fill")
-                                .foregroundColor(.yellow)
-                            Text("Today")
-                                .font(.callout)
-                                .foregroundColor(.black)
-                                .bold()
+                            if item.isToday {
+                                Image(systemName: "star.fill")
+                                    .foregroundColor(.yellow)
+                                Text("Today")
+                                    .font(.callout)
+                                    .foregroundColor(.black)
+                                    .bold()
+                            } else {
+                                Image(systemName: "archivebox.fill")
+                                    .foregroundColor(.brown)
+                                Text("Someday")
+                                    .font(.callout)
+                                    .foregroundColor(.black)
+                                    .bold()
+                            }
                         })
                         
                         Spacer()
