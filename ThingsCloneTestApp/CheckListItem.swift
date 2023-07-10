@@ -91,35 +91,15 @@ struct CheckListItem: View {
                         Spacer()
 
                         if hasLists {
-                            
-                            Divider()
-                            
                             VStack(alignment: .leading) {
-                                HStack {
-                                    Image(systemName: "circle")
-                                        .foregroundColor(.accentColor)
-                                    Text("List Item 1")
-                                }
-                                
                                 Divider()
-                                
-                                HStack {
-                                    Image(systemName: "circle")
-                                        .foregroundColor(.accentColor)
-                                    Text("List Item 2")
-                                }
-                                
+                                ListItem(text: "List Item 1")
                                 Divider()
-                                
-                                HStack {
-                                    Image(systemName: "checkmark")
-                                    Text("List Item 2").strikethrough()
-                                }
-                                .foregroundColor(.gray)
+                                ListItem(text: "List Item 2")
+                                Divider()
+                                ListItem(text: "List Item 3", isComplete: true)
+                                Divider()
                             }
-                            .font(.caption)
-                            
-                            Divider()
                         }
                         
                         Spacer()
@@ -179,6 +159,26 @@ struct CheckListItem: View {
                 .frame(alignment: .top)
             }
         }
+    }
+}
+
+struct ListItem : View {
+    var text: String
+    @State var isComplete = false
+    
+    var body : some View {
+        Button(action: {
+            isComplete.toggle()
+        }, label: {
+            HStack {
+                Image(systemName: isComplete ? "checkmark" : "circle")
+                    .foregroundColor(isComplete ? .gray : .accentColor)
+                Text(text)
+                    .strikethrough(isComplete)
+            }
+            .foregroundColor(isComplete ? .gray : .black)
+            .font(.caption)
+        })
     }
 }
 
